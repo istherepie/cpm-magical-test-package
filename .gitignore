@@ -4,3 +4,7 @@
 # ide/editor
 .vscode
 .idea
+
+# build
+/build/
+/tmp/
