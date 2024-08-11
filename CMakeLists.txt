@@ -6,4 +6,9 @@ project(
   LANGUAGES C
 )
 
-add_library(magiclib src/magic.c src/magic.h)
+add_library(magiclib src/magic.c)
+
+target_include_directories(magiclib PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>  # <prefix>/include
+)
